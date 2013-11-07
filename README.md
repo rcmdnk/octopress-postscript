@@ -3,6 +3,9 @@ octopress-ps
 
 Octopress plugin for the tag of a postscript.
 
+:warning: I tested only with Kramdown 0.14.2. With other parsers, such code
+syntax (backtick/codeblock) could not work correctly.
+
 # Installation at Octopress
 
 1. Copy `plugins/postscript.rb`
