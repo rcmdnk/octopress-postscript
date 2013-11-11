@@ -11,12 +11,9 @@ module Jekyll
     def render(context)
       output = super
       config = context.registers[:site].config
-      if config['ps_title']
-        title = config['ps_title'] + "#{@date}"
-      else
-        title = "P.S.#{@date}"
-      end
-      %(<div class="postscript" markdown="block"><strong>#{title}</strong>\n\n#{output}\n</div>)
+      title = (config['ps_title'] ? config['ps_title']:"P.S.") + "#{@date}"
+      close = config['ps_close'] ? config['ps_close'] : ""
+      %(\n<div class="postscript" markdown="block"><strong>#{title}</strong>\n\n#{output}\n\n<strong>#{close}</strong>\n</div>\n)
     end
   end
 end

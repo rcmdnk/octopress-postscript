@@ -65,6 +65,12 @@ You can change the title "P.S." by setting `ps_title` variable in `_config.yml` 
 
 This will change `P.S.` to `ps`.
 
+Another option is closing comment.
+
+    ps_close: end of postscript.
+
+will show `end of postscripts.` at the end of your postscript.
+
 Postscripts will be in div of class="postscript",
 so that you can change the style for the postscript.
 
