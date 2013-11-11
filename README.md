@@ -77,3 +77,7 @@ so that you can change the style for the postscript.
 The original style just add `$img-border` before and after the postscript.
 See `sass/plugins/_postscript.scss`.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rcmdnk/octopress-postscript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
