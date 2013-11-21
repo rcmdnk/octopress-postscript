@@ -1,5 +1,5 @@
-octopress-ps
-============
+octopress-psostscript
+=====================
 
 Octopress plugin for the tag of a postscript.
 
