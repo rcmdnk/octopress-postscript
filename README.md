@@ -77,7 +77,34 @@ so that you can change the style for the postscript.
 The original style just add `$img-border` before and after the postscript.
 See `sass/plugins/_postscript.scss`.
 
+# Automatic assign of "date_updated" value
 
+In a YAML block of each post,
+you can define `date_updated` (or `updated`) in addition to `date`.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rcmdnk/octopress-postscript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Octopress provides [date-format](https://github.com/octopress/date-format)
+with which you can use such `page.date_html` value, which is replaced date information like:
+
+    <time class="entry-date" datetime="2015-06-19T12:00:00+00:00"><span class="date">19 Jun 2015</span></time>
+
+There is also a tag `page.date_updated_html` for an updated date.
+In addition, there are tag with time information like `page.date_time_updated_html`.
+
+By using octopress-postscript, these `page.date_updated_html` and `page.date_time_updated_html`
+are updated automatically when the tag is rendered.
+
+To use automatic assignment, give a date to `ps` tag, like `{% ps 2015/06/19 %}`.
+
+But such format like `{{page.date_updated_html}}` is rendered before tags.
+
+Instead, octopress-postscript provides tags: `{% datehtml %}` and `{% updatedhtml %}`,
+which are corresponding to `{{page.date_updated_html}}` and `{{page.date_updated_html}}`, respectively.
+
+These tags are rendered in order in the page.
+
+Therefore, `{% updatedhtml %}` after `{%ps%}` tag has newer date,
+so that you can use it in a footer region, but can't use in a header region.
+
+If the page has multi `ps` tags, the latest date is stored.
+
 
