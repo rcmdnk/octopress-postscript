@@ -100,6 +100,11 @@ But such format like `{{page.date_updated_html}}` is rendered before tags.
 Instead, octopress-postscript provides tags: `{% datehtml %}` and `{% updatedhtml %}`,
 which are corresponding to `{{page.date_updated_html}}` and `{{page.date_updated_html}}`, respectively.
 
+They give
+
+
+    <span class="date"><time class="entry-date" datetime="2015-06-19T12:00:00+00:00"><span class="date">19 Jun 2015</span></time></span>
+
 These tags are rendered in order in the page.
 
 Therefore, `{% updatedhtml %}` after `{%ps%}` tag has newer date,
@@ -107,4 +112,10 @@ so that you can use it in a footer region, but can't use in a header region.
 
 If the page has multi `ps` tags, the latest date is stored.
 
+If you want to add anything before the date information, give words like:
 
+    {% updatedhtml Updated: %}
+
+Then, it gives:
+
+    <span class="date">Updated: <time class="entry-date" datetime="2015-06-19T12:00:00+00:00"><span class="date">19 Jun 2015</span></time></span>
