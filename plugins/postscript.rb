@@ -38,10 +38,10 @@ module Jekyll
             context['page']['date_updated_html'] = Octopress::PageDate.date_updated_html(psupdated, false)
             context['page']['date_time_updated_html'] = Octopress::PageDate.date_updated_html(psupdated)
             if context['page']['date_html']
-              context['page']['date_html'].sub!(" updated")
+              context['page']['date_html'].sub!(" updated", "")
             end
             if context['page']['date_time_html']
-              context['page']['date_time_html'].sub!(" updated")
+              context['page']['date_time_html'].sub!(" updated", "")
             end
           end
         end
