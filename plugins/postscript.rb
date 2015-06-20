@@ -52,11 +52,12 @@ module Jekyll
 
   class DateHTML < Liquid::Tag
     def initialize(name, markup, tokens)
+      @html_name = 'date_html'
       @prewords = markup
       super
     end
     def render(context)
-      html = context['page']['date_html']
+      html = context['page'][@html_name]
       if html == nil
         ""
       else
@@ -65,23 +66,31 @@ module Jekyll
     end
   end
 
-  class UpdatedHTML < Liquid::Tag
+  class DateTimeHTML < DateHTML
     def initialize(name, markup, tokens)
-      @prewords = markup
       super
+      @html_name = 'date_html'
     end
-    def render(context)
-      html = context['page']['date_updated_html']
-      if html == nil
-        ""
-      else
-        "<span class=\"date-wrapper\">#{@prewords}#{html}</span>"
-      end
+  end
+
+  class DateUpdatedHTML < DateHTML
+    def initialize(name, markup, tokens)
+      super
+      @html_name = 'date_updated_html'
+    end
+  end
+
+  class DateTimeUpdatedHTML < DateHTML
+    def initialize(name, markup, tokens)
+      super
+      @html_name = 'date_time_updated_html'
     end
   end
 end
 
 Liquid::Template.register_tag('ps', Jekyll::Postscript)
 Liquid::Template.register_tag('postscript', Jekyll::Postscript)
-Liquid::Template.register_tag('datehtml', Jekyll::DateHTML)
-Liquid::Template.register_tag('updatedhtml', Jekyll::UpdatedHTML)
+Liquid::Template.register_tag('date_html', Jekyll::DateHTML)
+Liquid::Template.register_tag('date_time_html', Jekyll::DateHTML)
+Liquid::Template.register_tag('date_updated_html', Jekyll::DateUpdatedHTML)
+Liquid::Template.register_tag('date_time_updated_html', Jekyll::DateTimeUpdatedHTML)
