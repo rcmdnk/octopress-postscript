@@ -9,6 +9,6 @@
   }
 }
 
-.byline ~ .date:before {
+.byline ~ .date-wrapper:before {
   @extend .separator;
 }

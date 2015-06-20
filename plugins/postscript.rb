@@ -60,7 +60,7 @@ module Jekyll
       if html == nil
         ""
       else
-        "<span class=\"date\">#{@prewords}#{html}</span>"
+        "<span class=\"date-wrapper\">#{@prewords}#{html}</span>"
       end
     end
   end
@@ -75,7 +75,7 @@ module Jekyll
       if html == nil
         ""
       else
-        "<span class=\"date\">#{@prewords}#{html}</span>"
+        "<span class=\"date-wrapper\">#{@prewords}#{html}</span>"
       end
     end
   end
