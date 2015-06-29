@@ -6,7 +6,7 @@ Octopress plugin for the tag of a postscript.
 :warning: I tested only with Kramdown 0.14.2. With other parsers, such code
 syntax (backtick/codeblock) could not work correctly.
 
-# Installation at Octopress
+## Installation at Octopress
 
 1. Copy `plugins/postscript.rb`
    to your `plugins` directory.
@@ -26,7 +26,7 @@ syntax (backtick/codeblock) could not work correctly.
 
 Done!
 
-# Usage
+## Usage
 
 Use `ps` or `postscript` block for the postscript.
 
@@ -57,7 +57,7 @@ then,
     This is a postscipt.
     - - -
 
-# Options
+## Options
 
 You can change the title "P.S." by setting `ps_title` variable in `_config.yml` like:
 
@@ -77,7 +77,7 @@ so that you can change the style for the postscript.
 The original style just add `$img-border` before and after the postscript.
 See `sass/plugins/_postscript.scss`.
 
-# Automatic assign of "date_updated" value
+## Automatic assign of "date_updated" value
 
 In a YAML block of each post,
 you can define `date_updated` (or `updated`) in addition to `date`.
