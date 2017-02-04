@@ -79,6 +79,18 @@ See `sass/plugins/_postscript.scss`.
 
 ## Automatic assign of "date_updated" value
 
+---
+
+{% gemoji warning %}
+
+To use this option, you need to install
+[rcmdnk/date-format/octopress-date-format.rb](https://github.com/rcmdnk/date-format/blob/master/lib/octopress-date-format.rb)
+in your plugins directory.
+
+> [rcmdnk/date-format](https://github.com/rcmdnk/date-format)
+
+---
+
 In a YAML block of each post,
 you can define `date_updated` (or `updated`) in addition to `date`.
 
