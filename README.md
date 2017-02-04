@@ -81,7 +81,7 @@ See `sass/plugins/_postscript.scss`.
 
 ---
 
-{% gemoji warning %}
+:warning:
 
 To use this option, you need to install
 [rcmdnk/date-format/octopress-date-format.rb](https://github.com/rcmdnk/date-format/blob/master/lib/octopress-date-format.rb)
