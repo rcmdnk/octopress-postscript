@@ -31,9 +31,9 @@ Done!
 Use `ps` or `postscript` block for the postscript.
 
     This is an original content.
-    {%ps%}
+    {% ps %}
     This is a postscript.
-    {%endps%}
+    {% endps %}
 
 This will be like:
 
@@ -46,7 +46,7 @@ This will be like:
 
 If you want to add date, add an argument
 
-    {%ps 2013/01/01%}...{%endps%}
+    {% ps 2013/01/01 %}...{% endps %}
 
 then,
 
@@ -119,7 +119,7 @@ They give
 
 These tags are rendered in order in the page.
 
-Therefore, `{% updatedhtml %}` after `{%ps%}` tag has newer date,
+Therefore, `{% updatedhtml %}` after `{% ps %}` tag has newer date,
 so that you can use it in a footer region, but can't use in a header region.
 
 If the page has multi `ps` tags, the latest date is stored.
